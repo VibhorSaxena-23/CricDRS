@@ -1,0 +1,31 @@
+﻿# Model Configuration
+model:
+  path: "data/models/ball_detector.pt"
+  confidence_threshold: 0.5
+  device: "cpu"  # Use "cuda" if you have GPU
+
+# Video Processing
+video:
+  input_dir: "data/input_video"
+  output_dir: "data/output"
+  display_width: 1280
+  display_height: 720
+
+# Tracker Settings
+tracker:
+  max_history: 50
+  min_detections: 3
+
+# Visualization
+visualization:
+  show_bbox: true
+  show_trajectory: true
+  show_velocity: true
+  trajectory_color: [0, 255, 0]  # Green (BGR)
+  ball_color: [0, 0, 255]  # Red (BGR)
+  line_thickness: 2
+
+# Trajectory Analysis
+trajectory:
+  smooth_window: 5
+  velocity_unit: "pixels_per_second"
